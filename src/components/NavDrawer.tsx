@@ -8,13 +8,7 @@ import {
 import { Assessment, Logout, ShoppingCart } from '@mui/icons-material';
 import { useRouter } from 'next/router';
 
-import { ReactNode } from 'react';
-
-interface NavDrawerProps {
-  children: ReactNode;
-}
-
-const NavDrawer: React.FC<NavDrawerProps> = ({ children }) => {
+const NavDrawer: React.FC = () => {
   const router = useRouter();
   const isHomePage = router.pathname === '/';
 
@@ -52,9 +46,6 @@ const NavDrawer: React.FC<NavDrawerProps> = ({ children }) => {
           <text className="text-left text-sm">Logout</text>
         </ListItemButton>
       </Drawer>
-      <main className="flex-grow">
-        {children}
-      </main>
     </Box>
   );
 }
