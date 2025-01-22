@@ -46,33 +46,35 @@ const NavDrawer: React.FC = () => {
         onClose={handleDrawerToggle}
         classes={{ paper: 'w-72 bg-blue-100 text-black flex flex-col items-center' }}
       >
-        <div className="h-18 w-full flex items-center justify-center">
-          <div className="rounded-[20px] h-14 bg-orange-300 mt-4 w-56 flex items-center justify-center shadow-md">
-            <span className="text-white font-bold">Logo Container</span>
+        <Link href='/'>
+          <div className="h-18 w-full flex items-center justify-center">
+            <div className="rounded-[20px] h-14 bg-orange-300 mt-4 w-56 flex items-center justify-center shadow-md">
+              <span className="text-white font-bold">Logo Container</span>
+            </div>
           </div>
-        </div>
-        <text className=" mt-4 pt-4 mr-10">Menu</text>
+        </Link>
+        <p className=" mt-4 pt-4 mr-10">Menu</p>
         <List className="w-2/3">
           <Link href='/'>
             <ListItemButton className={`rounded-[10px] mb-2 justify-start" ${isHomePage ? 'bg-blue-200' : ''}`}>
               <ListItemIcon>
                 <Assessment className='text-orange-300' />
               </ListItemIcon>
-              <text className="text-left text-sm">Products</text>
+              <p className="text-left text-sm">Products</p>
             </ListItemButton>
           </Link>
           <ListItemButton className="rounded-[10px] mt-2">
             <ListItemIcon>
               <ShoppingCart className='text-orange-300' />
             </ListItemIcon>
-            <text className="text-left text-sm">My categories</text>
+            <p className="text-left text-sm">My categories</p>
           </ListItemButton>
         </List>
         <ListItemButton className=" absolute bottom-4 left-1/2 transform -translate-x-1/2 rounded-[10px] mb-2 w-2/3">
           <ListItemIcon>
             <Logout className='text-orange-300' />
           </ListItemIcon>
-          <text className="text-left text-sm">Logout</text>
+          <p className="text-left text-sm">Logout</p>
         </ListItemButton>
       </Drawer>
     </Box>
